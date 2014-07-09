@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bXb-Oo-mNi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Resize-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QJI-g3-mMW"/>
+                        <viewControllerLayoutGuide type="bottom" id="u8B-nM-Tv6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standard Resizing" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57X-4B-KhD">
+                                <rect key="frame" x="106" y="226" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HQ  Resizing" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quY-Iq-tGM">
+                                <rect key="frame" x="108" y="473" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-zv-P48" userLabel="CGContext Scroll View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="254"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAZ-Qq-FdN" userLabel="CGContext Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.46133150283606289" green="0.49206009457354094" blue="0.65672785043716431" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156864399999998" green="0.3803921938" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="W2Y-qS-2CK"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-8u-qq6" userLabel="vImage Scroll View">
+                                <rect key="frame" x="0.0" y="252" width="320" height="252"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcA-5Q-Sd9" userLabel="vImage Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.32237801799879368" green="0.65672785043716431" blue="0.32988549106012782" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156864399999998" green="0.29407132056451613" blue="0.17426915322580644" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="nLF-JQ-UY9"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ehh-8u-qq6" firstAttribute="width" secondItem="Me0-zv-P48" secondAttribute="width" id="0u8-iv-cqY"/>
+                            <constraint firstAttribute="trailing" secondItem="Me0-zv-P48" secondAttribute="trailing" id="3Mc-Zq-uMA"/>
+                            <constraint firstItem="Me0-zv-P48" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="56Z-Z7-Lqj"/>
+                            <constraint firstItem="Ehh-8u-qq6" firstAttribute="top" secondItem="Me0-zv-P48" secondAttribute="bottom" constant="-2" id="7Kz-rV-Bey"/>
+                            <constraint firstAttribute="trailing" secondItem="Ehh-8u-qq6" secondAttribute="trailing" id="9dz-PA-HMs"/>
+                            <constraint firstItem="u8B-nM-Tv6" firstAttribute="top" secondItem="Ehh-8u-qq6" secondAttribute="bottom" id="DiV-Fg-LI3"/>
+                            <constraint firstItem="Ehh-8u-qq6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="TG7-YC-Qmj"/>
+                            <constraint firstItem="Me0-zv-P48" firstAttribute="top" secondItem="QJI-g3-mMW" secondAttribute="bottom" id="bJb-kQ-ZvV"/>
+                            <constraint firstItem="Ehh-8u-qq6" firstAttribute="height" secondItem="Me0-zv-P48" secondAttribute="height" constant="-2" id="tFP-d4-BkF"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Resize" id="4kA-S5-2h1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="W6o-gh-L1R">
+                            <connections>
+                                <action selector="cameraButtonTapped:" destination="vXZ-lx-hvc" id="eHT-Sk-UnC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomImageView" destination="vcA-5Q-Sd9" id="yqf-9Q-G7M"/>
+                        <outlet property="bottomScrollView" destination="Ehh-8u-qq6" id="xhY-jP-Urp"/>
+                        <outlet property="topImageView" destination="fAZ-Qq-FdN" id="Ih8-4D-MKi"/>
+                        <outlet property="topScrollView" destination="Me0-zv-P48" id="p48-3f-wdy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="17K-KK-57Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bXb-Oo-mNi" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ymG-vP-0Pf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="kO2-lT-gQd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTR-zS-djV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="129"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
